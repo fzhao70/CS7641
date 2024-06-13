@@ -28,12 +28,24 @@ Here is the list of the methods and functions we plan to use in this project:
 
 ## (Potential) Results and Discussion
 
-
 Davies-Bouldin Index would be used for clustering evaluation. In the prediction, we will use the common regression metrics provided in the scikit-learn, which will have mean absolute error, mean squared error and coefficient of determination.
 
 We aim to illustrate the factors dominate PM2.5 trends of China in the past 10 years. Regional differnces in season variation and impacting factors are expected.
 
 ## References
+
+1.	Z. Ma, R. Liu, Y. Liu, and J. Bi, "Effects of air pollution control policies on PM2.5; pollution improvement in China from 2005 to 2017: a satellite-based perspective," Atmospheric Chemistry and Physics, vol. 19, no. 10, pp. 6861-6877, 2019, doi: 10.5194/acp-19-6861-2019.
+
+2.	S. Guo et al., "Elucidating severe urban haze formation in China," Proc Natl Acad Sci U S A, vol. 111, no. 49, pp. 17373-8, Dec 9 2014, doi: 10.1073/pnas.1419604111.
+
+3.	S. Zhao, D. Yin, Y. Yu, S. Kang, D. Qin, and L. Dong, "PM(2.5) and O(3) pollution during 2015-2019 over 367 Chinese cities: Spatiotemporal variations, meteorological and topographical impacts," Environ Pollut, vol. 264, p. 114694, Sep 2020, doi: 10.1016/j.envpol.2020.114694.
+
+4.	R. J. Huang et al., "High secondary aerosol contribution to particulate pollution during haze events in China," Nature, vol. 514, no. 7521, pp. 218-22, Oct 9 2014, doi: 10.1038/nature13774.
+
+5.	M. Shrivastava et al., "Recent advances in understanding secondary organic aerosol: Implications for global climate forcing," Reviews of Geophysics, vol. 55, no. 2, pp. 509-559, 2017, doi: 10.1002/2016rg000540.
+
+6.	Z. Wu et al., "Aerosol Liquid Water Driven by Anthropogenic Inorganic Salts: Implying Its Key Role in Haze Formation over the North China Plain," Environmental Science & Technology Letters, vol. 5, no. 3, pp. 160-166, 2018, doi: 10.1021/acs.estlett.8b00021.
+
 
 ### Timeline
 
