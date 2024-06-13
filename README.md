@@ -20,6 +20,13 @@ We will also use features or factors including VOCs emission, chemistry indicato
 Here is the list of the methods and functions we plan to use in this project:
 
 |Method	                    |   Libraries	 |   Function               |
+| --------------------      | -------------- | -----------------------  |
 |K-mean	                    |   scikit-learn |	sklearn.cluster.KMeans  |
 |Gradient Boost Tree Method	|   XGBoost	     |  XGBoost.XGBRegressor    |
 |Long Short Term Memory	    |   torch	     |  torch.nn.LSTM           |
+
+## (Potential) Results and Discussion
+
+## References
+
+### Contribution Table
