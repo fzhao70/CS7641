@@ -36,6 +36,8 @@ We aim to illustrate the factors dominate PM2.5 trends of China in the past 10 y
 ## References
 
 ### Gantt Chart
+
+
 | Task                                     |   Contributor           |  6/1 - 6/10 | 6/10 - 6/20 |  6/20 - 6/30 |  6/30 - 7/10 |
 | Find the Topic                           |   All                   |  &cross     |             |              |              |
 | Find the source of the data              |   Shengjun, Fanghe      |  &cross     |             |              |              |
