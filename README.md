@@ -35,7 +35,7 @@ We aim to illustrate the factors dominate PM2.5 trends of China in the past 10 y
 
 ## References
 
-### Gantt Chart
+### Timeline
 
 
 | Task                                     |   Contributor           |  6/1 - 6/10 | 6/10 - 6/20 |  6/20 - 6/30 |  6/30 - 7/10 |
@@ -48,10 +48,6 @@ We aim to illustrate the factors dominate PM2.5 trends of China in the past 10 y
 | Evaluation of Macine Learning Model      |   Shengjun, Fanghe      |             |             |    &#x2611;    |   &#x2611;     |
 | Visualizations                           |   Bin                   |             |             |   &#x2611;     |   &#x2611;     |
 | Write the report                         |   Bin                   |             |    &#x2611;   |   &#x2611;     |    &#x2611;    |
-
-### Timeline
-
-Timeline
 
 ### Contribution Table
 

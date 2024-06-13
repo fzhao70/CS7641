@@ -1,4 +1,12 @@
-title : CS7641 Project
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
-- jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-remote-theme
+
+title : CS7641 Project
+description: Machine Learning on PM2.5 pattern variation
+email: fzhao70@gatech.edu
+
