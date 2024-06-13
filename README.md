@@ -8,6 +8,7 @@ A dominant fraction of PM2.5 particles are secondarily formed in the atmosphere,
 ## Problem Definition 
 In this project, we collected hourly in situ measurements of fine particulate matter (PM2.5) mass concentration over 2030 sites in 193 cities across China from June 2014 to May 2024 from China National Environmental Monitoring Center (CNEMC, https://quotsoft.net/air/). We would compile an extensive dataset, including BVOC emissions  inventories from CAMS global emission inventories(https://ads.atmosphere.copernicus.eu/), AVOC emissions from the Multi-resolution Emission Inventory model for Climate and air pollution research (http://meicmodel.org.cn/), gas pollutant concentrations from CNEMC, and meteorological fields from ECMWF Reanalysis v5 (https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5) data. These features represent the central factors that impact the PM2.5 pollution, i.e., precursor concentration, atmospheric chemistry regime, meteorological transfer.
 
+The main objectives of this project are:
 
 1. Analyze the primary factors contributing to the reduction in PM2.5 concentrations in China over the past ten years and evaluate the effectiveness of air pollutant emission reduction regulation.
 2. Investigate the seasonal variation patterns of PM2.5 concentrations in different cities and identify potential pattern change with time.
@@ -27,9 +28,24 @@ Here is the list of the methods and functions we plan to use in this project:
 
 ## (Potential) Results and Discussion
 
+
+Davies-Bouldin Index would be used for clustering evaluation. In the prediction, we will use the common regression metrics provided in the scikit-learn, which will have mean absolute error, mean squared error and coefficient of determination.
+
+We aim to illustrate the factors dominate PM2.5 trends of China in the past 10 years. Regional differnces in season variation and impacting factors are expected.
+
 ## References
 
 ### Gantt Chart
+| Task                                     |   Contributor           |  6/1 - 6/10 | 6/10 - 6/20 |  6/20 - 6/30 |  6/30 - 7/10 |
+| Find the Topic                           |   All                   |  &cross     |             |              |              |
+| Find the source of the data              |   Shengjun, Fanghe      |  &cross     |             |              |              |
+| Implement the data preprocess            |   Shengjun, Fanghe      |             |   &cross    |   &cross     |              |
+| Implement Machine Learning Method K-Mean |   Shengjun, Fanghe      |             |   &cross    |              |              |
+| Implement Machine Learning Method GBTM   |   Shengjun, Fanghe      |             |  &cross     |   &cross     |              |
+| Implement Machine Learning Method LSTM   |   Shengjun, Fanghe      |             |             |     &cross   |              |
+| Evaluation of Macine Learning Model      |   Shengjun, Fanghe      |             |             |    &cross    |   &cross     |
+| Visualizations                           |   Bin                   |       |             |   &cross    |   &cross     |
+| Write the report                         |   Bin                   |       |    &cross   |   &cross    |    &cross     |
 
 ### Timeline
 
