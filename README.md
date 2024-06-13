@@ -39,15 +39,15 @@ We aim to illustrate the factors dominate PM2.5 trends of China in the past 10 y
 
 
 | Task                                     |   Contributor           |  6/1 - 6/10 | 6/10 - 6/20 |  6/20 - 6/30 |  6/30 - 7/10 |
-| Find the Topic                           |   All                   |  &cross     |             |              |              |
-| Find the source of the data              |   Shengjun, Fanghe      |  &cross     |             |              |              |
-| Implement the data preprocess            |   Shengjun, Fanghe      |             |   &cross    |   &cross     |              |
-| Implement Machine Learning Method K-Mean |   Shengjun, Fanghe      |             |   &cross    |              |              |
-| Implement Machine Learning Method GBTM   |   Shengjun, Fanghe      |             |  &cross     |   &cross     |              |
-| Implement Machine Learning Method LSTM   |   Shengjun, Fanghe      |             |             |     &cross   |              |
-| Evaluation of Macine Learning Model      |   Shengjun, Fanghe      |             |             |    &cross    |   &cross     |
-| Visualizations                           |   Bin                   |       |             |   &cross    |   &cross     |
-| Write the report                         |   Bin                   |       |    &cross   |   &cross    |    &cross     |
+| Find the Topic                           |   All                   |  &#x2611;     |             |              |              |
+| Find the source of the data              |   Shengjun, Fanghe      |  &#x2611;     |             |              |              |
+| Implement the data preprocess            |   Shengjun, Fanghe      |             |   &#x2611;    |   &#x2611;     |              |
+| Implement Machine Learning Method K-Mean |   Shengjun, Fanghe      |             |   &#x2611;    |              |              |
+| Implement Machine Learning Method GBTM   |   Shengjun, Fanghe      |             |  &#x2611;     |   &#x2611;     |              |
+| Implement Machine Learning Method LSTM   |   Shengjun, Fanghe      |             |             |     &#x2611;   |              |
+| Evaluation of Macine Learning Model      |   Shengjun, Fanghe      |             |             |    &#x2611;    |   &#x2611;     |
+| Visualizations                           |   Bin                   |             |             |   &#x2611;     |   &#x2611;     |
+| Write the report                         |   Bin                   |             |    &#x2611;   |   &#x2611;     |    &#x2611;    |
 
 ### Timeline
 
