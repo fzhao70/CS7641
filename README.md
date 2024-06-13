@@ -30,3 +30,8 @@ Here is the list of the methods and functions we plan to use in this project:
 ## References
 
 ### Contribution Table
+|Name	                    |   Contribution   |
+| --------------------      | -------------- | 
+|Bin Bai	                |   Introduction/Background & Problem Definition & Reference |	
+|Fanghe Zhao	            |   Method &  Results and Discussion |
+|Shengjun Xi	            |   Method &  Results and Discussion | 
