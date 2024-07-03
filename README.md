@@ -1,4 +1,4 @@
-# CS7641 Project : Machine Learning on PM2.5 pattern variation
+# CS7641 Project : Machine Learning on $PM_{2.5}$ pattern variation
 
 ## Introduction/Background:
 Air pollution, especially suspended particulate matter (PM) pollution, has been significantly mitigated in China over the past 10 years through continuous government emission regulation efforts. However, the specific achievements have varied from city to city due to the complex influences of emission reduction, atmospheric chemistry regimes, regional characteristics, and meteorological patterns.
@@ -70,10 +70,17 @@ We aim to illustrate the factors dominate PM2.5 trends of China in the past 10 y
 | Visualizations                           |   Bin                   |             |             |   &#x2611;     |   &#x2611;     |
 | Write the report                         |   Bin                   |             |    &#x2611;   |   &#x2611;     |    &#x2611;    |
 
-### Contribution Table
+### Proposal Contributions
 
 |Name	                    |   Contribution                                             |
 | --------------------      | --------------                                             | 
 |Bin Bai	                |   Introduction/Background & Problem Definition & Reference |	
 |Fanghe Zhao	            |   Method &  Results and Discussion                         |
 |Shengjun Xi	            |   Method &  Results and Discussion                         | 
+### Midterm Contributions
+
+|Name	                    |   Contribution                                             |
+| --------------------      | --------------                                             | 
+|Bin Bai	                |   Method and Result Discussions & Visualization & Report Writting |	
+|Fanghe Zhao	            |   Data Peprocessing & Model Train & Method and Result Discussions                    |
+|Shengjun Xi	            |   Data Peprocessing & Method and Result Discussions                       | 
