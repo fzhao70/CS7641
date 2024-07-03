@@ -17,14 +17,17 @@ The main objectives of this project are:
 ## Methods
 1. data collection and preprocessing
 We first processed the hourly PM2.5 concentration data to daily average and only used days with at least 17 hours of data. We further derived the monthly and annual mean from the daily averages.
-2. Unsupervised method: K-means clustering
-   2.1 Annual mean trend
-   We firstly clustered the 9-year annual mean trends for 317 cities. The annual mean PM2.5 concentrations are normalized for each city by
-   $$conc_{norm} = \frac{conc-conc_{min}}{conc_{max}-conc_{min}} $$
-4. 
-Then, we will use both unsupervised and supervised learning methods. We will first apply the K-mean clustering method on the PM2.5 time series to group the mode of the PM2.5 temporal profiles. We will use both L2 norm and the Dynamic Time Warping to conduct clustering. Dynamic Time Warping is a similarity measure between time series.
+2. Unsupervised method: K-means clustering \
+   Here we used L2 norm to conduct clustering, i.e., the Euclidean distance was used. We didn't use Dynamic Time Warping (DTW) although DTW is a similarity measure between time series. This is because our temperal profiles are synchronous which doesn't allow for stretching and translation.
+   2.1 Annual mean trend \
+   We firstly clustered the 9-year annual mean trends for 317 cities using K-mean clustering. The annual mean PM2.5 concentrations are normalized for each city by
+   $$conc_{norm} = \frac{conc-conc_{min}}{conc_{max}-conc_{min}} $$\
+   2.2 Seasonal trend based on monthly trend \
+   We further clustered the seasonal trends for 317 cities using K-mean clustering. The seasonal trend component of the 9-year PM2.5 temperal profiles for each city was derived following https://www.geeksforgeeks.org/seasonality-detection-in-time-series-data/. 
+   In brief, the total monthly temperal variations were expressed as the summation of long-term trend, seasonal trend and residuals. The long-term trend was fitted using a polynomial function.
+3. Supervised method: 
 We will also use features or factors including VOCs emission, chemistry indicator and meteorological parameters to train a prediction model to predict the PM2.5 temporal profiles and seasonal variation patterns. For the prediction model, we will use both tree-based method and artificial neural network. For the tree-based method, we will choose to use the gradient boosted tree method. For the artificial neural network, we will used the long-term memory structure. These methods are known to be effective on the time series prediction. 
-Here is the list of the methods and functions we plan to use in this project:
+Here is the list of the methods and functions we used/plan to use in this project:
 
 |Method	                    |   Libraries	 |   Function               |
 | --------------------      | -------------- | -----------------------  |
@@ -32,7 +35,7 @@ Here is the list of the methods and functions we plan to use in this project:
 |Gradient Boost Tree Method	|   XGBoost	     |  XGBoost.XGBRegressor    |
 |Long Short Term Memory	    |   torch	     |  torch.nn.LSTM           |
 
-## (Potential) Results and Discussion
+## Results and Discussion
 
 Davies-Bouldin Index would be used for clustering evaluation. In the prediction, we will use the common regression metrics provided in the scikit-learn, which will have mean absolute error, mean squared error and coefficient of determination.
 
