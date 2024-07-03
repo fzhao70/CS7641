@@ -36,7 +36,10 @@ Here is the list of the methods and functions we used/plan to use in this projec
 |Long Short Term Memory	    |   torch	     |  torch.nn.LSTM           |
 
 ## Results and Discussion
-
+K-mean clustering results 1.1 annual trend
+We generated 2 clusters from annual trends of PM2.5 of 317 cities, with the 3rd cluster being outliers that cannot be represented by the 2 clusters. The annual trend for each cluster centers are shown in Fig. 1 a-c and Fig. 1d shows the clustering results for 317 cities spatially.
+1.2 Seasonal trend
+Figure 2 shows the seasonal trend for each cluster centers and spatial distribution of each clusters. Davies-Bouldin Index would be used for clustering evaluation. In the prediction, we will use the common regression metrics provided in the scikit-learn, which will have mean absolute error, mean squared error and coefficient of determination.
 Davies-Bouldin Index would be used for clustering evaluation. In the prediction, we will use the common regression metrics provided in the scikit-learn, which will have mean absolute error, mean squared error and coefficient of determination.
 
 We aim to illustrate the factors dominate PM2.5 trends of China in the past 10 years. Regional differnces in season variation and impacting factors are expected.
