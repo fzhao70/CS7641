@@ -36,7 +36,7 @@ Here is the list of the methods and functions we used/plan to use in this projec
 |Long Short Term Memory	    |   torch	     |  torch.nn.LSTM           |
 
 ## Results and Discussion
-1. K-mean clustering results
+1. K-mean clustering results \
 1.1 annual trend \
 We generated two main clusters from the annual PM2.5 trends of 317 cities, with a third cluster representing outliers that could not be represented by the two main clusters. The annual trends for each cluster center are shown in Fig. 1a-c, while Fig. 1d displays the spatial distribution of the clustering results for all 317 cities. For cities in Cluster 1, PM2.5 mass concentration declined continuously from 2014 to 2022, due to persistent emission reduction measures implemented by the Chinese government. However, there was a rebound in PM2.5 concentrations in 2023 for these cities. Cluster 1 includes most of the cities in the provinces of Heilongjiang, Jilin, Liaoning, Beijing, Hebei, Shandong, Henan, Hunan, Hubei, Zhejiang, Sichuan, Chongqing, Tibet, Ningxia, and Qinghai. \
 In contrast, cities in Cluster 2 showed a decline in PM2.5 concentration only after 2017, with a similar rebound in 2023. The delayed decrease in PM2.5 concentration for Cluster 2 might be related to different chemistry regimes, pollutant emission structures and delayed implementation of emission reduction practices in provinces such as Shanxi, Jiangsu, Anhui, and many southern provinces. \
@@ -46,10 +46,6 @@ Figure 2 shows the seasonal trends for each cluster center and the spatial distr
 These four clusters exhibit distinct spatial patterns. Cluster 3 includes most of the cities in central China and Xinjiang. Cluster 4 encompasses cities in southern China, mainly in Hainan, Guangdong, Guangxi, Jiangxi, and Fujian provinces. Cluster 2 includes cities in Yunnan province and several coastal cities in Fujian province. Cluster 1 represents most of the cities in northeastern, northwestern China, and Jiangsu province. \
 The different seasonal patterns reflect varying meteorological conditions, emission structures, and chemical regimes across different regions, which will be further addressed in the supervised model section.
 
-
-Davies-Bouldin Index would be used for clustering evaluation. In the prediction, we will use the common regression metrics provided in the scikit-learn, which will have mean absolute error, mean squared error and coefficient of determination.
-
-We aim to illustrate the factors dominate PM2.5 trends of China in the past 10 years. Regional differnces in season variation and impacting factors are expected.
 
 ## References
 
