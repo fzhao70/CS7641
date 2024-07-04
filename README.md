@@ -95,6 +95,7 @@ Figure 3. PM2.5 concentration seasonal trend centers for each clusters (a-d) and
 |Bin Bai	                |   Introduction/Background & Problem Definition & Reference |	
 |Fanghe Zhao	            |   Method &  Results and Discussion                         |
 |Shengjun Xi	            |   Method &  Results and Discussion                         | 
+
 ### Midterm Contributions
 
 |Name	                    |   Contribution                                             |
