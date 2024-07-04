@@ -1,4 +1,4 @@
-# CS7641 Project : Machine Learning on $PM_{2.5}$ pattern variation
+# CS7641 Project : Machine Learning on PM2.5 pattern variation
 
 ## Introduction/Background:
 Air pollution, especially suspended particulate matter (PM) pollution, has been significantly mitigated in China over the past 10 years through continuous government emission regulation efforts. However, the specific achievements have varied from city to city due to the complex influences of emission reduction, atmospheric chemistry regimes, regional characteristics, and meteorological patterns.
@@ -18,23 +18,24 @@ The main objectives of this project are:
 
 ## Methods
 
-1. data collection and preprocessing
+### 1. data collection and preprocessing
 
 We first processed the hourly PM2.5 concentration data to daily average and only used days with at least 17 hours of data. We further derived the monthly and annual mean from the daily averages.
 
-2. Unsupervised method: K-means clustering 
+### 2. Unsupervised method: K-means clustering 
 
 Here we used L2 norm to conduct clustering, i.e., the Euclidean distance was used. We didn't use Dynamic Time Warping (DTW) although DTW is a similarity measure between time series. This is because our temperal profilesare synchronous which doesn't allow for stretching and translation.
 
-2.1 Annual mean trend 
+1. Annual mean trend 
 We firstly clustered the 9-year annual mean trends for 317 cities using K-mean clustering. The annual mean PM2.5 concentrations are normalized for each city by
 
-$$conc_{norm} = \frac{conc-conc_{min}}{conc_{max}-conc_{min}} $$
+$$conc_{norm} = \frac{conc-conc_{min}}{conc_{max}-conc_{min}}$$
 
-2.2 Seasonal trend based on monthly trend 
+2. Seasonal trend based on monthly trend 
 
-We further clustered the seasonal trends for 317 cities using K-mean clustering. The seasonal trend component of the 9-year PM2.5 temperal profiles for each city was derived following https://www.geeksforgeeks.orgseasonality-detection-in-time-series-data/. 
-In brief, the total monthly temperal variations were expressed as the summation of long-term trend, seasonal trend and residuals. The long-term trend was fitted using a polynomial function. \
+We further clustered the seasonal trends for 317 cities using K-mean clustering. The seasonal trend component of the 9-year PM2.5 temperal profiles for each city was derived following [this webpage](https://www.geeksforgeeks.orgseasonality-detection-in-time-series-data/).
+
+In brief, the total monthly temperal variations were expressed as the summation of long-term trend, seasonal trend and residuals. The long-term trend was fitted using a polynomial function. 
 
 The cluster numbers were determined based on the distortion elbow figure (distortion vs. cluster numbers), as shown in Fig. 1a and 1d. Ultimately, we generated three clusters for the annual mean trend and four clusters for the seasonal trend. We evaluated our clustering results using the Silhouette Coefficient (Fig. 1b and 1e) and the Davies-Bouldin Index (Fig. 1c and 1f). The Silhouette Coefficients were greater than 0.2 for both clustering scenarios. Considering the ratio of feature numbers to sample numbers (9 vs. 317) and the dispersion level of our data, our clustering results are acceptable.
 
