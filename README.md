@@ -16,7 +16,7 @@ The main objectives of this project are:
 
 3. Identify the regional patterns by clustering different cities regarding of PM2.5 concentration trend and seasonal variation patterns.
 
-## 3. Methods
+## 3 Methods
 
 ### 3.1 data collection and preprocessing
 
