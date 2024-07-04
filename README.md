@@ -11,13 +11,19 @@ In this project, we collected hourly in situ measurements of fine particulate ma
 The main objectives of this project are:
 
 1. Analyze the primary factors contributing to the reduction in PM2.5 concentrations in China over the past ten years and evaluate the effectiveness of air pollutant emission reduction regulation.
+
 2. Investigate the seasonal variation patterns of PM2.5 concentrations in different cities and identify potential pattern change with time.
+
 3. Identify the regional patterns by clustering different cities regarding of PM2.5 concentration trend and seasonal variation patterns.
 
 ## Methods
+
 1. data collection and preprocessing
+
 We first processed the hourly PM2.5 concentration data to daily average and only used days with at least 17 hours of data. We further derived the monthly and annual mean from the daily averages.
-2. Unsupervised method: K-means clustering \
+
+2. Unsupervised method: K-means clustering 
+
    Here we used L2 norm to conduct clustering, i.e., the Euclidean distance was used. We didn't use Dynamic Time Warping (DTW) although DTW is a similarity measure between time series. This is because our temperal profiles are synchronous which doesn't allow for stretching and translation.
    \
    2.1 Annual mean trend \
@@ -28,7 +34,10 @@ We first processed the hourly PM2.5 concentration data to daily average and only
    In brief, the total monthly temperal variations were expressed as the summation of long-term trend, seasonal trend and residuals. The long-term trend was fitted using a polynomial function. \
 \
    The cluster numbers were determined based on the distortion elbow figure (distortion vs. cluster numbers), as shown in Fig. 1a and 1d. Ultimately, we generated three clusters for the annual mean trend and four clusters for the seasonal trend. We evaluated our clustering results using the Silhouette Coefficient (Fig. 1b and 1e) and the Davies-Bouldin Index (Fig. 1c and 1f). The Silhouette Coefficients were greater than 0.2 for both clustering scenarios. Considering the ratio of feature numbers to sample numbers (9 vs. 317) and the dispersion level of our data, our clustering results are acceptable.
+
+
 4. Supervised method: 
+
 We will also use features or factors including VOCs emission, chemistry indicator and meteorological parameters to train a prediction model to predict the PM2.5 temporal profiles and seasonal variation patterns. For the prediction model, we will use both tree-based method and artificial neural network. For the tree-based method, we will choose to use the gradient boosted tree method. For the artificial neural network, we will used the long-term memory structure. These methods are known to be effective on the time series prediction. 
 Here is the list of the methods and functions we used/plan to use in this project:
 
@@ -39,9 +48,12 @@ Here is the list of the methods and functions we used/plan to use in this projec
 |Long Short Term Memory	    |   torch	     |  torch.nn.LSTM           |
 
 ## Results and Discussion
+
 1. K-mean clustering results \
+
 1.1 annual trend \
 We generated two main clusters from the annual PM2.5 trends of 317 cities, with a third cluster representing outliers that could not be represented by the two main clusters. The annual trends for each cluster center are shown in Fig. 2a-c, while Fig. 2d displays the spatial distribution of the clustering results for all 317 cities. For cities in Cluster 1, PM2.5 mass concentration declined continuously from 2014 to 2022, due to persistent emission reduction measures implemented by the Chinese government. However, there was a rebound in PM2.5 concentrations in 2023 for these cities. Cluster 1 includes most of the cities in the provinces of Heilongjiang, Jilin, Liaoning, Beijing, Hebei, Shandong, Henan, Hunan, Hubei, Zhejiang, Sichuan, Chongqing, Tibet, Ningxia, and Qinghai. \
+
 \
 In contrast, cities in Cluster 2 showed a decline in PM2.5 concentration only after 2017, with a similar rebound in 2023. The delayed decrease in PM2.5 concentration for Cluster 2 might be related to different chemistry regimes, pollutant emission structures and delayed implementation of emission reduction practices in provinces such as Shanxi, Jiangsu, Anhui, and many southern provinces. \
 \
@@ -58,6 +70,11 @@ Figure 1. Evaluation for K-mean clustering of PM2.5 concentration annual mean tr
 Figure 2. PM2.5 concentration annual mean trend centers for each clusters (a-c) and spatial distribution of clustering results (d) \
 Figure 3. PM2.5 concentration seasonal trend centers for each clusters (a-d) and spatial distribution of clustering results (e)
 
+![Figure 1](figure/mt_fig1_evaluation.png "Fig.1")
+
+![Figure 2](figure/mt_fig2_annual_mean_cluster.png "Fig.2")
+
+![Figure 3](figure/mt_fig3_seasonal_cluster.png "Fig.2")
 
 ## References
 
