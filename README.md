@@ -26,12 +26,12 @@ We first processed the hourly PM2.5 concentration data to daily average and only
 
 Here we used L2 norm to conduct clustering, i.e., the Euclidean distance was used. We didn't use Dynamic Time Warping (DTW) although DTW is a similarity measure between time series. This is because our temperal profilesare synchronous which doesn't allow for stretching and translation.
 
-1. Annual mean trend 
+1.Annual mean trend 
 We firstly clustered the 9-year annual mean trends for 317 cities using K-mean clustering. The annual mean PM2.5 concentrations are normalized for each city by
 
 $$conc_{norm} = \frac{conc-conc_{min}}{conc_{max}-conc_{min}}$$
 
-2. Seasonal trend based on monthly trend 
+2.Seasonal trend based on monthly trend 
 
 We further clustered the seasonal trends for 317 cities using K-mean clustering. The seasonal trend component of the 9-year PM2.5 temperal profiles for each city was derived following [this webpage](https://www.geeksforgeeks.orgseasonality-detection-in-time-series-data/).
 
@@ -39,7 +39,7 @@ In brief, the total monthly temperal variations were expressed as the summation 
 
 The cluster numbers were determined based on the distortion elbow figure (distortion vs. cluster numbers), as shown in Fig. 1a and 1d. Ultimately, we generated three clusters for the annual mean trend and four clusters for the seasonal trend. We evaluated our clustering results using the Silhouette Coefficient (Fig. 1b and 1e) and the Davies-Bouldin Index (Fig. 1c and 1f). The Silhouette Coefficients were greater than 0.2 for both clustering scenarios. Considering the ratio of feature numbers to sample numbers (9 vs. 317) and the dispersion level of our data, our clustering results are acceptable.
 
-4. Supervised method: 
+3.Supervised method: 
 
 We will also use features or factors including VOCs emission, chemistry indicator and meteorological parameters to train a prediction model to predict the PM2.5 temporal profiles and seasonal variation patterns. For the prediction model, we will use both tree-based method and artificial neural network. For the tree-based method, we will choose to use the gradient boosted tree method. For the artificial neural network, we will used the long-term memory structure. These methods are known to be effective on the time series prediction. 
 Here is the list of the methods and functions we used/plan to use in this project:
