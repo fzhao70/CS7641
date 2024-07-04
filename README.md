@@ -24,17 +24,19 @@ We first processed the hourly PM2.5 concentration data to daily average and only
 
 2. Unsupervised method: K-means clustering 
 
-   Here we used L2 norm to conduct clustering, i.e., the Euclidean distance was used. We didn't use Dynamic Time Warping (DTW) although DTW is a similarity measure between time series. This is because our temperal profiles are synchronous which doesn't allow for stretching and translation.
-   \
-   2.1 Annual mean trend \
-   We firstly clustered the 9-year annual mean trends for 317 cities using K-mean clustering. The annual mean PM2.5 concentrations are normalized for each city by
-   $$conc_{norm} = \frac{conc-conc_{min}}{conc_{max}-conc_{min}} $$\
-   2.2 Seasonal trend based on monthly trend \
-   We further clustered the seasonal trends for 317 cities using K-mean clustering. The seasonal trend component of the 9-year PM2.5 temperal profiles for each city was derived following https://www.geeksforgeeks.org/seasonality-detection-in-time-series-data/. 
-   In brief, the total monthly temperal variations were expressed as the summation of long-term trend, seasonal trend and residuals. The long-term trend was fitted using a polynomial function. \
-\
-   The cluster numbers were determined based on the distortion elbow figure (distortion vs. cluster numbers), as shown in Fig. 1a and 1d. Ultimately, we generated three clusters for the annual mean trend and four clusters for the seasonal trend. We evaluated our clustering results using the Silhouette Coefficient (Fig. 1b and 1e) and the Davies-Bouldin Index (Fig. 1c and 1f). The Silhouette Coefficients were greater than 0.2 for both clustering scenarios. Considering the ratio of feature numbers to sample numbers (9 vs. 317) and the dispersion level of our data, our clustering results are acceptable.
+Here we used L2 norm to conduct clustering, i.e., the Euclidean distance was used. We didn't use Dynamic Time Warping (DTW) although DTW is a similarity measure between time series. This is because our temperal profilesare synchronous which doesn't allow for stretching and translation.
 
+2.1 Annual mean trend 
+We firstly clustered the 9-year annual mean trends for 317 cities using K-mean clustering. The annual mean PM2.5 concentrations are normalized for each city by
+
+$$conc_{norm} = \frac{conc-conc_{min}}{conc_{max}-conc_{min}} $$
+
+2.2 Seasonal trend based on monthly trend 
+
+We further clustered the seasonal trends for 317 cities using K-mean clustering. The seasonal trend component of the 9-year PM2.5 temperal profiles for each city was derived following https://www.geeksforgeeks.orgseasonality-detection-in-time-series-data/. 
+In brief, the total monthly temperal variations were expressed as the summation of long-term trend, seasonal trend and residuals. The long-term trend was fitted using a polynomial function. \
+
+The cluster numbers were determined based on the distortion elbow figure (distortion vs. cluster numbers), as shown in Fig. 1a and 1d. Ultimately, we generated three clusters for the annual mean trend and four clusters for the seasonal trend. We evaluated our clustering results using the Silhouette Coefficient (Fig. 1b and 1e) and the Davies-Bouldin Index (Fig. 1c and 1f). The Silhouette Coefficients were greater than 0.2 for both clustering scenarios. Considering the ratio of feature numbers to sample numbers (9 vs. 317) and the dispersion level of our data, our clustering results are acceptable.
 
 4. Supervised method: 
 
@@ -49,32 +51,34 @@ Here is the list of the methods and functions we used/plan to use in this projec
 
 ## Results and Discussion
 
-1. K-mean clustering results \
+1.K-mean clustering results
 
-1.1 annual trend \
-We generated two main clusters from the annual PM2.5 trends of 317 cities, with a third cluster representing outliers that could not be represented by the two main clusters. The annual trends for each cluster center are shown in Fig. 2a-c, while Fig. 2d displays the spatial distribution of the clustering results for all 317 cities. For cities in Cluster 1, PM2.5 mass concentration declined continuously from 2014 to 2022, due to persistent emission reduction measures implemented by the Chinese government. However, there was a rebound in PM2.5 concentrations in 2023 for these cities. Cluster 1 includes most of the cities in the provinces of Heilongjiang, Jilin, Liaoning, Beijing, Hebei, Shandong, Henan, Hunan, Hubei, Zhejiang, Sichuan, Chongqing, Tibet, Ningxia, and Qinghai. \
+1.1 annual trend 
+We generated two main clusters from the annual PM2.5 trends of 317 cities, with a third cluster representing outliers that could not be represented by the two main clusters. The annual trends for each cluster center are shown in Fig. 2a-c, while Fig. 2d displays the spatial distribution of the clustering results for all 317 cities. For cities in Cluster 1, PM2.5 mass concentration declined continuously from 2014 to 2022, due to persistent emission reduction measures implemented by the Chinese government. However, there was a rebound in PM2.5 concentrations in 2023 for these cities. Cluster 1 includes most of the cities in the provinces of Heilongjiang, Jilin, Liaoning, Beijing, Hebei, Shandong, Henan, Hunan, Hubei, Zhejiang, Sichuan, Chongqing, Tibet, Ningxia, and Qinghai. 
 
-\
-In contrast, cities in Cluster 2 showed a decline in PM2.5 concentration only after 2017, with a similar rebound in 2023. The delayed decrease in PM2.5 concentration for Cluster 2 might be related to different chemistry regimes, pollutant emission structures and delayed implementation of emission reduction practices in provinces such as Shanxi, Jiangsu, Anhui, and many southern provinces. \
-\
-The remaining cities in Cluster 3 (outliers) did not show a clear decrease in PM2.5 concentration over the past nine years, particularly evident in many cities in Yunnan province. Overall, the annual trends for PM2.5 concentrations in 317 cities in China showed distinct spatial patterns from 2014 to 2023. Further investigation into the reasons for this phenomenon will be discussed in supervised model section. \
-\
-1.2 Seasonal trend \
-Figure 3 shows the seasonal trends for each cluster center and the spatial distribution of each cluster. For Cluster 1, PM2.5 mass concentration decreased from January to August and increased after August. For Cluster 2, PM2.5 concentration peaked in March and reached its lowest levels from June to August. For Cluster 3, the highest PM2.5 concentration was found in January, while the lowest concentrations were in July and August. For Cluster 4, PM2.5 concentration peaked in December and January and reached its lowest in June. \
-\
-These four clusters exhibit distinct spatial patterns. Cluster 3 includes most of the cities in central China and Xinjiang. Cluster 4 encompasses cities in southern China, mainly in Hainan, Guangdong, Guangxi, Jiangxi, and Fujian provinces. Cluster 2 includes cities in Yunnan province and several coastal cities in Fujian province. Cluster 1 represents most of the cities in northeastern, northwestern China, and Jiangsu province. \
-The different seasonal patterns reflect varying meteorological conditions, emission structures, and chemical regimes across different regions, which will be further addressed in the supervised model section. \
-\
-Figure Titles: \
-Figure 1. Evaluation for K-mean clustering of PM2.5 concentration annual mean trend (a-c) and seasonal trend (d-f) \
-Figure 2. PM2.5 concentration annual mean trend centers for each clusters (a-c) and spatial distribution of clustering results (d) \
-Figure 3. PM2.5 concentration seasonal trend centers for each clusters (a-d) and spatial distribution of clustering results (e)
+In contrast, cities in Cluster 2 showed a decline in PM2.5 concentration only after 2017, with a similar rebound in 2023. The delayed decrease in PM2.5 concentration for Cluster 2 might be related to different chemistry regimes, pollutant emission structures and delayed implementation of emission reduction practices in provinces such as Shanxi, Jiangsu, Anhui, and many southern provinces. 
+
+The remaining cities in Cluster 3 (outliers) did not show a clear decrease in PM2.5 concentration over the past nine years, particularly evident in many cities in Yunnan province. Overall, the annual trends for PM2.5 concentrations in 317 cities in China showed distinct spatial patterns from 2014 to 2023. Further investigation into the reasons for this phenomenon will be discussed in supervised model section. 
+
+1.2 Seasonal trend 
+Figure 3 shows the seasonal trends for each cluster center and the spatial distribution of each cluster. For Cluster 1, PM2.5 mass concentration decreased from January to August and increased after August. For Cluster 2, PM2.5 concentration peaked in March and reached its lowest levels from June to August. For Cluster 3, the highest PM2.5 concentration was found in January, while the lowest concentrations were in July and August. For Cluster 4, PM2.5 concentration peaked in December and January and reached its lowest in June. 
+
+These four clusters exhibit distinct spatial patterns. Cluster 3 includes most of the cities in central China and Xinjiang. Cluster 4 encompasses cities in southern China, mainly in Hainan, Guangdong, Guangxi, Jiangxi, and 
+
+Fujian provinces. Cluster 2 includes cities in Yunnan province and several coastal cities in Fujian province. Cluster 1 represents most of the cities in northeastern, northwestern China, and Jiangsu province. 
+
+The different seasonal patterns reflect varying meteorological conditions, emission structures, and chemical regimes across different regions, which will be further addressed in the supervised model section. 
+
+## Figures
 
 ![Figure 1](figure/mt_fig1_evaluation.png "Fig.1")
+Figure 1. Evaluation for K-mean clustering of PM2.5 concentration annual mean trend (a-c) and seasonal trend (d-f) 
 
 ![Figure 2](figure/mt_fig2_annual_mean_cluster.png "Fig.2")
+Figure 2. PM2.5 concentration annual mean trend centers for each clusters (a-c) and spatial distribution of clustering results (d) 
 
 ![Figure 3](figure/mt_fig3_seasonal_cluster.png "Fig.2")
+Figure 3. PM2.5 concentration seasonal trend centers for each clusters (a-d) and spatial distribution of clustering results (e)
 
 ## References
 
