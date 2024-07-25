@@ -48,7 +48,7 @@ Here is the list of the methods and functions we used/plan to use in this projec
 | --------------------      | -------------- | -----------------------  |
 |K-mean	                    |   scikit-learn |	sklearn.cluster.KMeans  |
 |Gradient Boost Tree Method	|   XGBoost	     |  XGBoost.XGBRegressor    |
-|Long Short Term Memory	    |   torch	     |  torch.nn.LSTM           |
+|Random Forest Regressor	    |   scikit-learn	     |  sklearn.ensemble.RandomForestRegressor  |
 
 ## 4 Results and Discussion
 
@@ -64,11 +64,11 @@ The remaining cities in Cluster 3 (outliers) did not show a clear decrease in PM
 #### 4.1.2 Seasonal trend 
 Figure 3 shows the seasonal trends for each cluster center and the spatial distribution of each cluster. For Cluster 1, PM2.5 mass concentration decreased from January to August and increased after August. For Cluster 2, PM2.5 concentration peaked in March and reached its lowest levels from June to August. For Cluster 3, the highest PM2.5 concentration was found in January, while the lowest concentrations were in July and August. For Cluster 4, PM2.5 concentration peaked in December and January and reached its lowest in June. 
 
-These four clusters exhibit distinct spatial patterns. Cluster 3 includes most of the cities in central China and Xinjiang. Cluster 4 encompasses cities in southern China, mainly in Hainan, Guangdong, Guangxi, Jiangxi, and 
-
-Fujian provinces. Cluster 2 includes cities in Yunnan province and several coastal cities in Fujian province. Cluster 1 represents most of the cities in northeastern, northwestern China, and Jiangsu province. 
+These four clusters exhibit distinct spatial patterns. Cluster 3 includes most of the cities in central China and Xinjiang. Cluster 4 encompasses cities in southern China, mainly in Hainan, Guangdong, Guangxi, Jiangxi, and Fujian provinces. Cluster 2 includes cities in Yunnan province and several coastal cities in Fujian province. Cluster 1 represents most of the cities in northeastern, northwestern China, and Jiangsu province. 
 
 The different seasonal patterns reflect varying meteorological conditions, emission structures, and chemical regimes across different regions, which will be further addressed in the supervised model section. 
+
+### 4.2 Supervised Results
 
 ## Figures
 
@@ -80,6 +80,7 @@ Figure 2. PM2.5 concentration annual mean trend centers for each clusters (a-c) 
 
 ![Figure 3](figure/mt_fig3_seasonal_cluster.png "Fig.2")
 Figure 3. PM2.5 concentration seasonal trend centers for each clusters (a-d) and spatial distribution of clustering results (e)
+
 
 ## References
 
