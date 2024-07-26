@@ -70,6 +70,18 @@ The different seasonal patterns reflect varying meteorological conditions, emiss
 
 ### 4.2 Supervised Results
 
+We then trained a supervised model with the monthly average of PM2.5 concentration, meteorological variables, and emissions. The variables we considered are listed in Table ###.
+
+We started by applying the unsupervised results to perform supervised predictions and found few differences in the results among the clusters. Therefore, we decided to train the model with the entire dataset for integration and robustness of the simulation results. Our hyperparameters were selected with cross-validation achieved by GridSearchCV from sklearn.
+
+Figures 4 and 5 show the resulting predictions using Random Forest and XGBoost, respectively. Both models provide good forecasts, given their $R^2$ and $MAPE$ values. However, XGBoost performs slightly better compared to Random Forest. The better performance of XGBoost is partially due to its ability to handle missing data internally, as we only pruned sites with less than 5% data points of the whole study period; missing data points still exist in our training dataset. Additionally, XGBoost uses gradient descent to optimize the loss function, making it more efficient in finding the optimal splits in the trees and providing better statistical measures for model evaluation. It should be noted that both models showed poorer performance under extremely high PM2.5 conditions. This implies the complicated mechanism of the formation of extreme PM2.5 events, during which the relative contribution of independent factors is not uniform.
+
+As shown in Figures 6 and 7, temperature and HCHO dominate local PM2.5 concentrations. The importance of other features is much smaller, which might explain the different orders of their relative importance given by the two models. The high sensitivity of PM2.5 to temperature suggests difficulties in air quality control under future climate changes, while the high impacts of HCHO highlight the importance of VOC emission controls in future air quality policies.
+
+## 5 Next Step
+We found the consistently distributed relative importance of features among the clusters. To further explain the notable cluster behaviors of PM2.5 temporal variations, we plan to investigate the time series of features based on the order of their relative importance. The clustering result based on seasonal variations approximately agrees with the climate zone distribution in China, suggesting that it might be beneficial for us to examine the time series of meteorological features, especially t2, given its significant contribution.
+
+To sum up, we need to analyze the trends and seasonality of meteorological patterns as well as emission activity, and evaluate their roles in the observed clustering behaviors of PM2.5 concentrations in the cities.
 ## Figures
 
 ![Figure 1](figure/mt_fig1_evaluation.png "Fig.1")
@@ -78,10 +90,24 @@ Figure 1. Evaluation for K-mean clustering of PM2.5 concentration annual mean tr
 ![Figure 2](figure/mt_fig2_annual_mean_cluster.png "Fig.2")
 Figure 2. PM2.5 concentration annual mean trend centers for each clusters (a-c) and spatial distribution of clustering results (d) 
 
-![Figure 3](figure/mt_fig3_seasonal_cluster.png "Fig.2")
+![Figure 3](figure/mt_fig3_seasonal_cluster.png "Fig.3")
 Figure 3. PM2.5 concentration seasonal trend centers for each clusters (a-d) and spatial distribution of clustering results (e)
 
+![Figure 4](figure/scatter_rfr.png "Fig.4")
 
+Figure 4. PM2.5 predicted with random forest
+
+![Figure 5](figure/scatter_gbt.png "Fig.5")
+
+Figure 5. PM2.5 predicted with XGboost
+
+![Figure 6](figure/importance_rfr.png "Fig.6")
+
+Figure 6. Feature importances based on Random Forest
+
+![Figure 7](figure/importance_gbt.png "Fig.7")
+
+Figure 7. Feature importances based on XGBoost
 ## References
 
 1.	Z. Ma, R. Liu, Y. Liu, and J. Bi, "Effects of air pollution control policies on PM2.5; pollution improvement in China from 2005 to 2017: a satellite-based perspective," Atmospheric Chemistry and Physics, vol. 19, no. 10, pp. 6861-6877, 2019, doi: 10.5194/acp-19-6861-2019.
