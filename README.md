@@ -78,6 +78,38 @@ Figures 4 and 5 show the resulting predictions using Random Forest and XGBoost, 
 
 As shown in Figures 6 and 7, temperature and HCHO dominate local PM2.5 concentrations. The importance of other features is much smaller, which might explain the different orders of their relative importance given by the two models. The high sensitivity of PM2.5 to temperature suggests difficulties in air quality control under future climate changes, while the high impacts of HCHO highlight the importance of VOC emission controls in future air quality policies.
 
+| Full Name                               |  Unit      | Short Name         |
+|  --------                               | -------    |   -------          |
+| u wind at 10m                           |  m/s       |     u10            |
+| v wind at 10m                           |  m/s       |     v10            |
+| Dewpoint at 2m                          |    K       |     d2m            |
+| Temperature at 2m                       |    K       |     t2m            |
+| Boundary Layer Height                   |    m       |     blh            |
+| Cloud Base Height                       |  0 - 1     |     cbh            |
+| Surface Pressure                        |     Pa     |     sp             |
+| Shortwave Solor downward radiation      | J m**-2    |    ssrd            |
+| Total Cloud Cover                       |  0 - 1     |    tcc             |
+| Total Cloud Ice Water Content           | kg m**-2   |   tciw             |
+| Total Cloud Liquid Water Content        | kg m**-2   |   tclw             |
+| Total Precipitation                     |  m         |     tp             |
+| UV visible albedo for diffuse radiation |  0 - 1     |   aluvd            |
+| UV visible albedo for direct radiation  |  0 - 1     |   aluvp            |
+| Formaldehyde Column Concentration       |molec/cm2   | HCHO_col           |
+| Alpha Pinene Emission                   | kg/m2/s    | alpha-pinene       |
+| Beta Pinene Emission                    | kg/m2/s    | beta-pinene        |
+| Isoprene Emission                       | kg/m2/s    | isoprene           |
+| Monoterpenes Emission                   | kg/m2/s    | other-monoterpenes | 
+| sesquiterpenes Emission                 | kg/m2/s    | sesquiterpenes     |
+| Black Carbon Anthropogenic Emission     | kg/km2/yr  | BC                 |
+| CO Anthropogenic Emission               | kg/km2/yr  | CO                 |
+| Ammonia Anthropogenic Emission          | kg/km2/yr  | NH3                |
+| NOx Anthropogenic Emission              | kg/km2/yr  | NOx                |
+| PM25 Anthropogenic Emission             | kg/km2/yr  | PM25               |
+| CH4 Anthropogenic Emission              | kg/km2/yr  | CH4                |
+| SO2 Anthropogenic Emission              | kg/km2/yr  | SO2                |
+| Nonmethane VOC Anthropogenic Emission   | kg/km2/yr  | VOC                |
+
+
 ## 5 Next Step
 We found the consistently distributed relative importance of features among the clusters. To further explain the notable cluster behaviors of PM2.5 temporal variations, we plan to investigate the time series of features based on the order of their relative importance. The clustering result based on seasonal variations approximately agrees with the climate zone distribution in China, suggesting that it might be beneficial for us to examine the time series of meteorological features, especially t2, given its significant contribution.
 
