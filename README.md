@@ -181,5 +181,13 @@ Figure 7. Feature importances based on XGBoost
 |Name	                    |   Contribution                                             |
 | --------------------      | --------------                                             | 
 |Bin Bai	                |   Method and Result Discussions & Visualization & Report Writting |	
-|Fanghe Zhao	            |   Data Peprocessing & Model Train & Method and Result Discussions                    |
-|Shengjun Xi	            |   Data Peprocessing & Method and Result Discussions                       | 
+|Fanghe Zhao	            |   Data Preprocessing & Model Train & Method and Result Discussions                    |
+|Shengjun Xi	            |   Data Preprocessing & Method and Result Discussions                       | 
+
+### Final Contributions
+
+|Name	                    |   Contribution                                             |
+| --------------------      | --------------                                             | 
+|Bin Bai	                |   Data Preprocessing & Model Train & Result Discussions & Video |	
+|Fanghe Zhao	            |   Data Preprocessing & Model Train & Result Discussions& Report Writting                    |
+|Shengjun Xi	            |   Data Preprocessing & Result Discussions & Report Writting                      | 
