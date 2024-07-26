@@ -154,36 +154,6 @@ Figure 7. Feature importances based on XGBoost
 6.	Z. Wu et al., "Aerosol Liquid Water Driven by Anthropogenic Inorganic Salts: Implying Its Key Role in Haze Formation over the North China Plain," Environmental Science & Technology Letters, vol. 5, no. 3, pp. 160-166, 2018, doi: 10.1021/acs.estlett.8b00021.
 
 
-### Timeline
-
-
-| Task                                     |   Contributor           |  6/1 - 6/10 | 6/10 - 6/20 |  6/20 - 6/30 |  6/30 - 7/10 |
-| Find the Topic                           |   All                   |  &#x2611;     |             |              |              |
-| Find the source of the data              |   Shengjun, Fanghe      |  &#x2611;     |             |              |              |
-| Implement the data preprocess            |   Shengjun, Fanghe      |             |   &#x2611;    |   &#x2611;     |              |
-| Implement Machine Learning Method K-Mean |   Shengjun, Fanghe      |             |   &#x2611;    |              |              |
-| Implement Machine Learning Method GBTM   |   Shengjun, Fanghe      |             |  &#x2611;     |   &#x2611;     |              |
-| Implement Machine Learning Method LSTM   |   Shengjun, Fanghe      |             |             |     &#x2611;   |              |
-| Evaluation of Macine Learning Model      |   Shengjun, Fanghe      |             |             |    &#x2611;    |   &#x2611;     |
-| Visualizations                           |   Bin                   |             |             |   &#x2611;     |   &#x2611;     |
-| Write the report                         |   Bin                   |             |    &#x2611;   |   &#x2611;     |    &#x2611;    |
-
-### Proposal Contributions
-
-|Name	                    |   Contribution                                             |
-| --------------------      | --------------                                             | 
-|Bin Bai	                |   Introduction/Background & Problem Definition & Reference |	
-|Fanghe Zhao	            |   Method &  Results and Discussion                         |
-|Shengjun Xi	            |   Method &  Results and Discussion                         | 
-
-### Midterm Contributions
-
-|Name	                    |   Contribution                                             |
-| --------------------      | --------------                                             | 
-|Bin Bai	                |   Method and Result Discussions & Visualization & Report Writting |	
-|Fanghe Zhao	            |   Data Preprocessing & Model Train & Method and Result Discussions                    |
-|Shengjun Xi	            |   Data Preprocessing & Method and Result Discussions                       | 
-
 ### Final Contributions
 
 |Name	                    |   Contribution                                             |
